@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>BookStore Chat</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- MathJax for LaTeX rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      color: #333;
+    }
+    #chatbox {
+      width: 500px;
+      max-width: 90%;
+      height: 400px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow-y: auto;
+      padding: 15px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .message {
+      margin: 5px 0;
+      padding: 8px 12px;
+      border-radius: 15px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+    .user-msg {
+      background-color: #007bff;
+      color: #fff;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+    .bot-msg {
+      background-color: #e2e2e2;
+      color: #333;
+      align-self: flex-start;
+      margin-right: auto;
+    }
+    #user_input {
+      width: 350px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 5px;
+      background-color: #28a745;
+      color: #fff;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    #forms {
+      width: 500px;
+      max-width: 90%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-box {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .form-box input {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .book-card {
+      border:1px solid #ccc;
+      border-radius:10px;
+      padding:10px;
+      margin-bottom:10px;
+      background:#f9f9f9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .book-card h4 {
+      margin: 0 0 5px 0;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Chat với BookStore</h2>
+  <div id="chatbox"></div>
+  <div>
+    <input type="text" id="user_input" placeholder="Nhập tin nhắn...">
+    <button onclick="sendMessage()">Gửi</button>
+  </div>
+  <div id="forms">
+    <div>
+      <button onclick="showSearch()">Tìm sách</button>
+      <button onclick="showOrderForm()">Đặt hàng</button>
+    </div>
+
+    <div id="search_form" class="form-box" style="display:none;">
+      <h3>Tìm kiếm sách</h3>
+      <input type="text" id="search_query" placeholder="Tên sách / Tác giả / Thể loại">
+      <button onclick="searchBook()">Tìm</button>
+      <div id="search_result"></div>
+    </div>
+
+    <div id="order_form" class="form-box" style="display:none;">
+      <h3>Đặt hàng</h3>
+      <input type="text" id="name" placeholder="Tên khách hàng">
+      <input type="text" id="phone" placeholder="Số điện thoại">
+      <input type="text" id="address" placeholder="Địa chỉ">
+      <input type="text" id="book" placeholder="Tên sách">
+      <input type="number" id="quantity" placeholder="Số lượng">
+      <button onclick="submitOrder()">Xác nhận</button>
+    </div>
+  </div>
+
+<script>
+function appendMessage(msg, sender){
+  let cls = sender === "user" ? "user-msg" : "bot-msg";
+  $("#chatbox").append("<div class='message " + cls + "'>" + msg + "</div>");
+  $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
+  if(sender === "bot"){
+    MathJax.typesetPromise(); // render LaTeX
+  }
+}
+
+// Hiển thị Gemini output dạng card
+function formatGeminiOutput(text) {
+    let bookBlocks = text.split(/\*+\s*(Tên sách|Tên sách):/).filter(s => s.trim() !== '');
+    let html = '';
+
+    bookBlocks.forEach(block => {
+        let titleMatch = block.match(/(Tên sách|Tên sách):\s*(.+)/i);
+        let authorMatch = block.match(/(Tác giả|Author):\s*(.+)/i);
+        let priceMatch = block.match(/(Giá|Price):\s*(.+)/i);
+        let stockMatch = block.match(/(Số lượng|Stock|Còn lại):\s*(.+)/i);
+        let descMatch = block.match(/(Mô tả|Description):\s*([\s\S]+)/i);
+
+        let title = titleMatch ? titleMatch[2].trim() : "";
+        let author = authorMatch ? authorMatch[2].trim() : "";
+        let price = priceMatch ? priceMatch[2].trim() : "";
+        let stock = stockMatch ? stockMatch[2].trim() : "";
+        let description = descMatch ? descMatch[2].trim() : "";
+
+        html += `<div class="book-card">
+            <h4>${title}</h4>
+            <p><b>Tác giả:</b> ${author}</p>
+            <p><b>Giá:</b> ${price}</p>
+            <p><b>Số lượng còn lại:</b> ${stock}</p>
+            <p><b>Mô tả:</b> ${description}</p>
+        </div>`;
+    });
+
+    return html;
+}
+
+function sendMessage() {
+  let msg = $("#user_input").val();
+  if(!msg) return;
+  appendMessage(msg, "user");
+  $("#user_input").val("");
+  $.post({
+    url: "/chat",
+    contentType: "application/json",
+    data: JSON.stringify({message: msg}),
+    success: function(data){
+      // Nếu là kết quả sách, format card
+      if(msg.toLowerCase().startsWith("tìm")){
+        let html = formatGeminiOutput(data.response);
+        $("#chatbox").append("<div class='message bot-msg'>" + html + "</div>");
+        MathJax.typesetPromise();
+      } else {
+        appendMessage(data.response, "bot");
+      }
+    }
+  });
+}
+
+function showSearch() {
+  $("#search_form").show();
+  $("#order_form").hide();
+}
+
+function showOrderForm() {
+  $("#order_form").show();
+  $("#search_form").hide();
+}
+
+function searchBook() {
+  let query = $("#search_query").val();
+  if(!query) return;
+  $.post({
+    url: "/chat",
+    contentType: "application/json",
+    data: JSON.stringify({message: "tìm " + query}),
+    success: function(data){
+      let html = formatGeminiOutput(data.response);
+      $("#search_result").html(html);
+      MathJax.typesetPromise();
+    }
+  });
+}
+
+function submitOrder() {
+  let order = {
+    customer_name: $("#name").val(),
+    phone: $("#phone").val(),
+    address: $("#address").val(),
+    book: $("#book").val(),
+    quantity: $("#quantity").val(),
+    status: "Pending"
+  };
+  $.post({
+    url: "/order",
+    contentType: "application/json",
+    data: JSON.stringify(order),
+    success: function(data){
+      alert(data.message);
+      $("#order_form").hide();
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý đơn hàng</title>
+</head>
+<body>
+  <h2>Danh sách đơn hàng</h2>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Tên khách</th><th>SĐT</th><th>Địa chỉ</th>
+      <th>Sách</th><th>Số lượng</th><th>Trạng thái</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+      <td>{{ order.customer_name }}</td>
+      <td>{{ order.phone }}</td>
+      <td>{{ order.address }}</td>
+      <td>{{ order.book }}</td>
+      <td>{{ order.quantity }}</td>
+      <td>{{ order.status }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

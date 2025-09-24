@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "price": 150000,
+    "stock": 10,
+    "category": "Khoa học viễn tưởng"
+  },
+  {
+    "title": "Harry Potter và Hòn đá Phù thủy",
+    "author": "J.K. Rowling",
+    "price": 120000,
+    "stock": 20,
+    "category": "Fantasy"
+  },
+  {
+    "title": "Nhà Giả Kim",
+    "author": "Paulo Coelho",
+    "price": 95000,
+    "stock": 15,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Sherlock Holmes: Tuyển tập",
+    "author": "Arthur Conan Doyle",
+    "price": 130000,
+    "stock": 12,
+    "category": "Trinh thám"
+  },
+  {
+    "title": "Sapiens: Lược sử loài người",
+    "author": "Yuval Noah Harari",
+    "price": 180000,
+    "stock": 8,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 110000,
+    "stock": 14,
+    "category": "Chính trị - Xã hội"
+  },
+  {
+    "title": "Lập Trình Python Cơ Bản",
+    "author": "Nguyễn Văn A",
+    "price": 160000,
+    "stock": 25,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Tuổi Trẻ Đáng Giá Bao Nhiêu",
+    "author": "Rosie Nguyễn",
+    "price": 90000,
+    "stock": 18,
+    "category": "Kỹ năng sống"
+  },
+  {
+    "title": "Chiến tranh và Hòa bình",
+    "author": "Lev Tolstoy",
+    "price": 200000,
+    "stock": 5,
+    "category": "Văn học kinh điển"
+  },
+  {
+    "title": "Truyện Kiều",
+    "author": "Nguyễn Du",
+    "price": 80000,
+    "stock": 30,
+    "category": "Văn học Việt Nam"
+  },
+  {
+    "title": "Trí tuệ nhân tạo - Tương lai và hiện tại",
+    "author": "Nguyễn Văn A",
+    "price": 150000,
+    "stock": 12,
+    "category": "Giới thiệu tổng quan về AI, ứng dụng và tiềm năng phát triển."
+  },
+  {
+    "title": "Học máy cơ bản",
+    "author": "Trần Thị B",
+    "price": 200000,
+    "stock": 5,
+    "category": "Cung cấp kiến thức nền tảng về machine learning."
+  },
+  {
+    "title": "Python cho phân tích dữ liệu",
+    "author": "Lê Văn C",
+    "price": 180000,
+    "stock": 8,
+    "category": "Hướng dẫn phân tích và trực quan hóa dữ liệu bằng Python."
+  },
+  {
+    "title": "Xử lý ngôn ngữ tự nhiên với Python",
+    "author": "Phạm Thị D",
+    "price": 220000,
+    "stock": 7,
+    "category": "Ứng dụng Python trong xử lý văn bản và NLP."
+  },
+  {
+    "title": "Deep Learning căn bản",
+    "author": "Ngô Văn E",
+    "price": 250000,
+    "stock": 10,
+    "category": "Giới thiệu mạng nơ-ron và các mô hình học sâu phổ biến."
+  },
+  {
+    "title": "Thị giác máy tính hiện đại",
+    "author": "Hoàng Thị F",
+    "price": 230000,
+    "stock": 4,
+    "category": "Phân tích và ứng dụng computer vision trong thực tiễn."
+  },
+  {
+    "title": "Khoa học dữ liệu cho người mới",
+    "author": "Vũ Văn G",
+    "price": 170000,
+    "stock": 15,
+    "category": "Cung cấp kiến thức tổng quan về khoa học dữ liệu."
+  },
+  {
+    "title": "Mạng nơ-ron và tối ưu hóa",
+    "author": "Đặng Thị H",
+    "price": 240000,
+    "stock": 6,
+    "category": "Giới thiệu các thuật toán tối ưu trong deep learning."
+  },
+  {
+    "title": "AI trong đời sống",
+    "author": "Phan Văn I",
+    "price": 160000,
+    "stock": 9,
+    "category": "Khám phá các ứng dụng AI trong y tế, giáo dục, và thương mại."
+  },
+  {
+    "title": "Toán học cho Machine Learning",
+    "author": "Nguyễn Thị K",
+    "price": 210000,
+    "stock": 11,
+    "category": "Trình bày kiến thức toán học nền tảng cho học máy."
+  }
+]
