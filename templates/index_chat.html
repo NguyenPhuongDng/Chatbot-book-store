@@ -1,256 +1,307 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>BookStore Chat</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- MathJax for LaTeX rendering -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    h2 {
-      color: #333;
-    }
-    #chatbox {
-      width: 500px;
-      max-width: 90%;
-      height: 400px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      overflow-y: auto;
-      padding: 15px;
-      background: #fff;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin-bottom: 10px;
-      display: flex;
-      flex-direction: column;
-    }
-    .message {
-      margin: 5px 0;
-      padding: 8px 12px;
-      border-radius: 15px;
-      max-width: 80%;
-      word-wrap: break-word;
-    }
-    .user-msg {
-      background-color: #007bff;
-      color: #fff;
-      align-self: flex-end;
-      margin-left: auto;
-    }
-    .bot-msg {
-      background-color: #e2e2e2;
-      color: #333;
-      align-self: flex-start;
-      margin-right: auto;
-    }
-    #user_input {
-      width: 350px;
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      padding: 8px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-left: 5px;
-      background-color: #28a745;
-      color: #fff;
-    }
-    button:hover {
-      opacity: 0.9;
-    }
-    #forms {
-      width: 500px;
-      max-width: 90%;
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .form-box {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .form-box input {
-      width: 100%;
-      margin: 5px 0;
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    .book-card {
-      border:1px solid #ccc;
-      border-radius:10px;
-      padding:10px;
-      margin-bottom:10px;
-      background:#f9f9f9;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .book-card h4 {
-      margin: 0 0 5px 0;
-    }
-    pre {
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      background: #f1f1f1;
-      padding: 10px;
-      border-radius: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat AI - Hỗ trợ khách hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+        .chat-container {
+            flex: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        .user {
+            background: #667eea;
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+        .bot {
+            background: #f1f1f1;
+            color: #333;
+            line-height: 1.5;
+        }
+        .bot h4 {
+            margin: 10px 0 5px 0;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+        }
+        .input-area {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+        #userInput {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+        }
+        #sendBtn {
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #sendBtn:hover {
+            background: #764ba2;
+        }
+        .form-popup {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .form-field {
+            margin: 10px 0;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-field select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-field small {
+            display: block;
+            margin-top: 5px;
+        }
+        .form-submit {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .back-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
 </head>
 <body>
-  <h2>Chat với BookStore</h2>
-  <div id="chatbox"></div>
-  <div>
-    <input type="text" id="user_input" placeholder="Nhập tin nhắn...">
-    <button onclick="sendMessage()">Gửi</button>
-  </div>
-  <div id="forms">
-    <div>
-      <button onclick="showSearch()">Tìm sách</button>
-      <button onclick="showOrderForm()">Đặt hàng</button>
+    <div class="header">
+        <a href="/" class="back-btn">← Về trang chủ</a>
+        <h1>💬 Chat AI - Hỗ trợ khách hàng</h1>
+        <p>Hỏi về sách, đặt hàng hoặc chat tự nhiên</p>
     </div>
 
-    <div id="search_form" class="form-box" style="display:none;">
-      <h3>Tìm kiếm sách</h3>
-      <input type="text" id="search_query" placeholder="Tên sách / Tác giả / Thể loại">
-      <button onclick="searchBook()">Tìm</button>
-      <div id="search_result"></div>
+    <div class="chat-container">
+        <div class="messages" id="messages">
+            <div class="message bot">
+                Xin chào! Tôi có thể giúp bạn tìm sách, đặt hàng hoặc trò chuyện. Bạn cần gì?
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Nhập tin nhắn..." onkeypress="if(event.key==='Enter') sendMessage()">
+            <button id="sendBtn" onclick="sendMessage()">Gửi</button>
+        </div>
     </div>
 
-    <div id="order_form" class="form-box" style="display:none;">
-      <h3>Đặt hàng</h3>
-      <input type="text" id="name" placeholder="Tên khách hàng">
-      <input type="text" id="phone" placeholder="Số điện thoại">
-      <input type="text" id="address" placeholder="Địa chỉ">
-      <input type="text" id="book" placeholder="Tên sách">
-      <input type="number" id="quantity" placeholder="Số lượng">
-      <button onclick="submitOrder()">Xác nhận</button>
-    </div>
-  </div>
+    <script>
+        async function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            if (!message) return;
 
-<script>
-function appendMessage(msg, sender){
-  let cls = sender === "user" ? "user-msg" : "bot-msg";
-  $("#chatbox").append("<div class='message " + cls + "'>" + msg + "</div>");
-  $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
-  if(sender === "bot"){
-    MathJax.typesetPromise(); // render LaTeX
-  }
-}
+            addMessage(message, 'user');
+            input.value = '';
 
-// Hiển thị Gemini output dạng card
-function formatGeminiOutput(text) {
-    let bookBlocks = text.split(/\*+\s*(Tên sách|Tên sách):/).filter(s => s.trim() !== '');
-    let html = '';
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message })
+                });
 
-    bookBlocks.forEach(block => {
-        let titleMatch = block.match(/(Tên sách|Tên sách):\s*(.+)/i);
-        let authorMatch = block.match(/(Tác giả|Author):\s*(.+)/i);
-        let priceMatch = block.match(/(Giá|Price):\s*(.+)/i);
-        let stockMatch = block.match(/(Số lượng|Stock|Còn lại):\s*(.+)/i);
-        let descMatch = block.match(/(Mô tả|Description):\s*([\s\S]+)/i);
+                const data = await response.json();
+                
+                if (data.response.type === 'form_request') {
+                    addFormMessage(data.response);
+                } else {
+                    addMessage(data.response, 'bot');
+                }
+            } catch (error) {
+                addMessage('Lỗi kết nối: ' + error.message, 'bot');
+            }
+        }
 
-        let title = titleMatch ? titleMatch[2].trim() : "";
-        let author = authorMatch ? authorMatch[2].trim() : "";
-        let price = priceMatch ? priceMatch[2].trim() : "";
-        let stock = stockMatch ? stockMatch[2].trim() : "";
-        let description = descMatch ? descMatch[2].trim() : "";
+        function addMessage(text, sender) {
+            const messages = document.getElementById('messages');
+            const div = document.createElement('div');
+            div.className = `message ${sender}`;
+            
+            // Format text với markdown-style formatting
+            let formattedText = text;
+            
+            // Xử lý từng bước để tránh conflict
+            formattedText = formattedText.replace(/\*\*\*(.*?)\*\*\*/g, '<h4 style="margin: 10px 0; color: #667eea;">📚 $1</h4>');
+            formattedText = formattedText.replace(/\*\*([^*]+?)\*\*/g, '<strong style="color: #333;">$1</strong>');
+            formattedText = formattedText.replace(/\* ([^:]+?):/g, '<strong style="color: #333;">$1:</strong>');
+            formattedText = formattedText.replace(/\* (.+)/g, '<div style="margin: 5px 0; padding-left: 15px;">• $1</div>');
+            formattedText = formattedText.replace(/\n/g, '<br>');
+            
+            div.innerHTML = formattedText;
+            messages.appendChild(div);
+            messages.scrollTop = messages.scrollHeight;
+        }
 
-        html += `<div class="book-card">
-            <h4>${title}</h4>
-            <p><b>Tác giả:</b> ${author}</p>
-            <p><b>Giá:</b> ${price}</p>
-            <p><b>Số lượng còn lại:</b> ${stock}</p>
-            <p><b>Mô tả:</b> ${description}</p>
-        </div>`;
-    });
+        function addFormMessage(formData) {
+            const messages = document.getElementById('messages');
+            const div = document.createElement('div');
+            div.className = 'message bot';
+            
+            let formTitle = "Vui lòng điền thông tin đặt hàng:";
+            if (formData.books_found) {
+                const booksList = formData.books_list.map(book => 
+                    `📚 ${book.title} - ${book.author} (${book.price} VNĐ, còn ${book.stock} cuốn)`
+                ).join('<br>');
+                formTitle = `Tìm thấy ${formData.books_list.length} cuốn sách phù hợp:<br>
+                            <div style="background: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 5px; font-size: 0.9em;">
+                                ${booksList}
+                            </div>
+                            Điền thông tin để đặt hàng:`;
+            }
+            
+            const formHtml = `
+                <div class="form-popup">
+                    <div style="margin-bottom: 15px;">${formTitle}</div>
+                    <form id="orderForm" onsubmit="submitOrder(event)">
+                        ${formData.form_fields.map(field => {
+                            if (field.type === 'select') {
+                                return `
+                                    <div class="form-field">
+                                        <label>${field.label}:</label>
+                                        <select name="${field.name}" required onchange="updateMaxQuantity(this)">
+                                            <option value="">-- Chọn sách --</option>
+                                            ${field.options.map(book => 
+                                                `<option value="${book.id}" data-stock="${book.stock}">
+                                                    ${book.title} - ${book.author} (${book.price} VNĐ, còn ${book.stock})
+                                                </option>`
+                                            ).join('')}
+                                        </select>
+                                    </div>
+                                `;
+                            } else {
+                                return `
+                                    <div class="form-field">
+                                        <label>${field.label}:</label>
+                                        <input type="${field.type}" 
+                                               name="${field.name}" 
+                                               value="${field.value || ''}"
+                                               ${field.readonly ? 'readonly style="background: #f5f5f5;"' : ''}
+                                               ${field.min ? `min="${field.min}"` : ''}
+                                               ${field.name === 'quantity' ? 'id="quantityInput"' : ''}
+                                               required>
+                                        ${field.name === 'quantity' ? '<small id="stockWarning" style="color: #666;"></small>' : ''}
+                                    </div>
+                                `;
+                            }
+                        }).join('')}
+                        <button type="submit" class="form-submit">Xác nhận đặt hàng</button>
+                    </form>
+                </div>
+            `;
+            
+            div.innerHTML = formHtml;
+            messages.appendChild(div);
+            messages.scrollTop = messages.scrollHeight;
+        }
 
-    return html;
-}
+        function updateMaxQuantity(selectElement) {
+            const selectedOption = selectElement.selectedOptions[0];
+            const quantityInput = document.getElementById('quantityInput');
+            const stockWarning = document.getElementById('stockWarning');
+            
+            if (selectedOption && selectedOption.dataset.stock) {
+                const stock = parseInt(selectedOption.dataset.stock);
+                quantityInput.max = stock;
+                stockWarning.textContent = `Tối đa ${stock} cuốn`;
+                
+                // Reset quantity nếu vượt quá
+                if (parseInt(quantityInput.value) > stock) {
+                    quantityInput.value = stock;
+                }
+            }
+        }
 
-function sendMessage() {
-  let msg = $("#user_input").val();
-  if(!msg) return;
-  appendMessage(msg, "user");
-  $("#user_input").val("");
-  $.post({
-    url: "/chat",
-    contentType: "application/json",
-    data: JSON.stringify({message: msg}),
-    success: function(data){
-      // Nếu là kết quả sách, format card
-      if(msg.toLowerCase().startsWith("tìm")){
-        let html = formatGeminiOutput(data.response);
-        $("#chatbox").append("<div class='message bot-msg'>" + html + "</div>");
-        MathJax.typesetPromise();
-      } else {
-        appendMessage(data.response, "bot");
-      }
-    }
-  });
-}
+        async function submitOrder(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const orderData = Object.fromEntries(formData);
 
-function showSearch() {
-  $("#search_form").show();
-  $("#order_form").hide();
-}
+            try {
+                const response = await fetch('/order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderData)
+                });
 
-function showOrderForm() {
-  $("#order_form").show();
-  $("#search_form").hide();
-}
-
-function searchBook() {
-  let query = $("#search_query").val();
-  if(!query) return;
-  $.post({
-    url: "/chat",
-    contentType: "application/json",
-    data: JSON.stringify({message: "tìm " + query}),
-    success: function(data){
-      let html = formatGeminiOutput(data.response);
-      $("#search_result").html(html);
-      MathJax.typesetPromise();
-    }
-  });
-}
-
-function submitOrder() {
-  let order = {
-    customer_name: $("#name").val(),
-    phone: $("#phone").val(),
-    address: $("#address").val(),
-    book: $("#book").val(),
-    quantity: $("#quantity").val(),
-    status: "Pending"
-  };
-  $.post({
-    url: "/order",
-    contentType: "application/json",
-    data: JSON.stringify(order),
-    success: function(data){
-      alert(data.message);
-      $("#order_form").hide();
-    }
-  });
-}
-</script>
+                const result = await response.json();
+                addMessage(result.message, 'bot');
+                event.target.remove();
+            } catch (error) {
+                addMessage('Lỗi đặt hàng: ' + error.message, 'bot');
+            }
+        }
+    </script>
 </body>
 </html>

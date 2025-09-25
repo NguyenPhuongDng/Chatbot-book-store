@@ -30,35 +30,44 @@ def classify_intent(message):
         return 'chat'
 
 
+import re, json
+
 def extract_book_entities(message):
-        """Trích xuất thông tin sách từ tin nhắn"""
-        prompt = f"""
-        Từ tin nhắn sau, hãy trích xuất thông tin về sách:
-        - Tên sách
-        - Tác giả  
-        - Thể loại  
-        Tin nhắn: "{message}"
-        Trả về kết quả dưới dạng JSON nếu có ít nhất một trong ba thông tin:
-        {{
-            "title": "tên sách hoặc None",
-            "author": "tác giả hoặc None", 
-            "category": "thể loại hoặc None",
-        }}
-        Nếu không tìm thấy cả 3 thông tin trên Hãy trả về câu hỏi để hỏi khách hàng cung cấp thêm thông tin.
-        """
-        
-        try:
-            response = model.generate_content(prompt)
-            # Parse JSON from response
-            json_text = response.text.strip()
-            # Remove markdown formatting if present
-            json_text = re.sub(r'```json\n?', '', json_text)
-            json_text = re.sub(r'\n?```', '', json_text)
-            
-            entities = json.loads(json_text)
-            return entities
-        except:
-            return None
+    """Trích xuất thông tin sách từ tin nhắn"""
+    prompt = f"""
+    Từ tin nhắn sau, hãy trích xuất thông tin về sách:
+    - Tên sách/truyện
+    - Tác giả  
+    - Thể loại  
+    Tin nhắn: "{message}"
+    Trả về kết quả dưới dạng JSON:
+    {{
+        "title": "tên sách/truyện hoặc None",
+        "author": "tác giả hoặc None", 
+        "category": "thể loại hoặc None"
+    }}
+    """
+    
+    try:
+        response = model.generate_content(prompt)
+        json_text = response.text.strip()
+
+        # loại bỏ ```json ... ```
+        json_text = re.sub(r"```json\s*", "", json_text)
+        json_text = re.sub(r"```", "", json_text)
+
+        entities = json.loads(json_text)
+
+        # đảm bảo có đủ key
+        return {
+            "title": entities.get("title"),
+            "author": entities.get("author"),
+            "category": entities.get("category")
+        }
+    except Exception as e:
+        print("Extract error:", e)
+        return {"title": None, "author": None, "category": None}
+
 
 def generate_response_with_data(message, intent, book_data=None):
     """Tạo phản hồi từ AI với dữ liệu sách"""
@@ -70,14 +79,18 @@ def generate_response_with_data(message, intent, book_data=None):
         {book_data}
         
         Hãy trả lời câu hỏi của khách hàng, chỉ sử dụng thông tin dữ liệu sách từ cơ sở dữ liệu.
-        Nếu không có thông tin hãy nói không tìm thấy.
+        Nếu không có thông tin sách từ cơ sở dữ liệu hãy nói không tìm thấy.
         Giữ câu trả lời ngắn gọn, thân thiện, lịch sự, đưa ra tất cả thông tin sách từ dữ liệu sách.
         """
     elif intent == 'order':
         prompt = f"""
-        Khách hàng muốn đặt hàng: "{message}"
-        
-        Hãy phản hồi thân thiện và lịch sự.
+        Khách hàng muốn đặt hàng
+        Hãy kiểm trả thông tin khách hàng xem đã nhập đúng định dạng thông tin của 3 trường nội dung
+        Tên, Số điện thoại, Địa chỉ
+        Dưới đây là thông tin khách hàng
+        {book_data} 
+        Nếu đúng định dạng thông tin, trả về "Correct", nếu không đúng trả về "Wrong"
+        Trả về chỉ một từ: Correct hoặc Wrong
         """
     else:
         prompt = f"""
@@ -100,3 +113,5 @@ def generate_response_with_data(message, intent, book_data=None):
             return "Bạn có thể sử dụng nút 'Đặt hàng' để tạo đơn hàng mới!"
         else:
             return "Xin lỗi, tôi không thể trả lời lúc này. Vui lòng thử lại sau."
+
+
