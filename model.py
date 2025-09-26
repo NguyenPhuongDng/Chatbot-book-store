@@ -73,15 +73,24 @@ def generate_response_with_data(message, intent, book_data=None):
     """Tạo phản hồi từ AI với dữ liệu sách"""
     if intent == 'search' and book_data:
         prompt = f"""
-        Khách hàng hỏi: "{message}"
-        
-        Dữ liệu sách từ cơ sở dữ liệu:
-        {book_data}
-        
-        Hãy trả lời câu hỏi của khách hàng, chỉ sử dụng thông tin dữ liệu sách từ cơ sở dữ liệu.
-        Nếu không có thông tin sách từ cơ sở dữ liệu hãy nói không tìm thấy.
-        Giữ câu trả lời ngắn gọn, thân thiện, lịch sự, đưa ra tất cả thông tin sách từ dữ liệu sách.
+            Khách hàng hỏi: "{message}"
+
+            Dữ liệu sách từ cơ sở dữ liệu:
+            {book_data}
+
+            Yêu cầu:
+            - Chỉ sử dụng thông tin trong dữ liệu sách.
+            - Nếu không có sách phù hợp, trả lời: "Xin lỗi, tôi không tìm thấy sách bạn cần."
+            - Nếu có sách, hãy liệt kê đầy đủ theo định dạng:
+
+            **Tên sách** – **Tác giả**  
+            📚 Thể loại: xxx  
+            💰 Giá: xxx VNĐ  
+            📦 Số lượng: y cuốn  
+
+            - Giữ văn phong ngắn gọn, thân thiện, lịch sự.
         """
+
     elif intent == 'order':
         prompt = f"""
         Khách hàng muốn đặt hàng
@@ -94,14 +103,17 @@ def generate_response_with_data(message, intent, book_data=None):
         """
     else:
         prompt = f"""
-        Khách hàng nói: "{message}"
-        
-        Bạn là chatbot của BookStore - cửa hàng sách.
-        Hãy trả lời thân thiện, hữu ích về chủ đề liên quan đến sách, đọc sách, hoặc dịch vụ của cửa hàng.
-        Giữ câu trả lời ngắn gọn, thân thiện, lịch sự.
-        Nếu không biết, hãy nói "Xin lỗi, tôi không biết về điều đó."
-        Nếu khách hỏi tìm sách, hãy hỏi các thông tin cụ thể như tên sách, tác giả, thể loại.
-        Nêu khách hỏi đặt hàng, Hãy hỏi cụ thể tên sách để tra cứu số lượng.
+        Bạn là chatbot bán hàng của BookStore.  
+        Nhiệm vụ: Trả lời ngắn gọn, thân thiện, lịch sự, tập trung vào sách và dịch vụ mua bán của cửa hàng.  
+
+        Quy tắc:  
+        1. Luôn trả lời theo ngữ cảnh "bán sách". Không tư vấn ngoài sách hoặc cửa hàng.  
+        2. Nếu khách tìm sách → Hỏi chi tiết: tên sách, tác giả, thể loại.  
+        3. Nếu khách muốn đặt hàng → Hỏi rõ tên sách để kiểm tra số lượng.  
+        4. Nếu thông tin không thuộc phạm vi (sách/cửa hàng) → Trả lời: "Xin lỗi, tôi không biết về điều đó."  
+        5. Không trả lời dài dòng. Tránh giải thích lý thuyết. Chỉ cung cấp thông tin cần thiết cho mua hàng.  
+        Hãy trả lời câu hỏi sau của khách hàng
+        Câu hỏi: {message}
         """
     try:
         response = model.generate_content(prompt)
