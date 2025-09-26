@@ -121,7 +121,7 @@ def chat():
         if isinstance(entities, dict) and any(entities.values()):
             books = query_books_by_dict(entities)
             if len(books) == 0:
-                response = f"Xin lỗi!\nChúng tôi không có quyển sách **{entities.get('title')}** trong kho."
+                response = f"Xin lỗi!\nChúng tôi không có quyển sách mà bạn cần tìm."
             else:
                 book_str = "\n".join([
                     f"Tên sách: {book['title']}, Tác giả: {book['author']}, "

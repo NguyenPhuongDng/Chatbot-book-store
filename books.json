@@ -1,142 +1,1402 @@
 [
   {
-    "title": "Dune",
-    "author": "Frank Herbert",
-    "price": 150000,
-    "stock": 10,
-    "category": "Khoa học viễn tưởng"
+    "title": "Truyện Kiều",
+    "author": "Mark Twain",
+    "price": 454787,
+    "stock": 9,
+    "category": "Kinh tế"
   },
   {
-    "title": "Harry Potter và Hòn đá Phù thủy",
-    "author": "J.K. Rowling",
-    "price": 120000,
-    "stock": 20,
-    "category": "Fantasy"
+    "title": "Chí Phèo",
+    "author": "Nguyễn Du",
+    "price": 210297,
+    "stock": 11,
+    "category": "Xã hội học"
   },
   {
-    "title": "Nhà Giả Kim",
-    "author": "Paulo Coelho",
-    "price": 95000,
-    "stock": 15,
+    "title": "Tắt Đèn",
+    "author": "Nguyễn Minh Châu",
+    "price": 466525,
+    "stock": 17,
     "category": "Tiểu thuyết"
   },
   {
-    "title": "Sherlock Holmes: Tuyển tập",
-    "author": "Arthur Conan Doyle",
-    "price": 130000,
-    "stock": 12,
-    "category": "Trinh thám"
+    "title": "Dế Mèn Phiêu Lưu Ký",
+    "author": "Yuval Noah Harari",
+    "price": 463117,
+    "stock": 49,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "Lão Hạc",
+    "author": "Nguyễn Minh Châu",
+    "price": 276453,
+    "stock": 32,
+    "category": "Văn học Việt Nam"
+  },
+  {
+    "title": "Nhật ký trong tù",
+    "author": "Tô Hoài",
+    "price": 264486,
+    "stock": 47,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Đắc nhân tâm",
+    "author": "Ernest Hemingway",
+    "price": 110768,
+    "stock": 28,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Harry Potter và Hòn đá phù thủy",
+    "author": "Ernest Hemingway",
+    "price": 268536,
+    "stock": 17,
+    "category": "Văn học nước ngoài"
+  },
+  {
+    "title": "1984",
+    "author": "Homer",
+    "price": 337823,
+    "stock": 46,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Animal Farm",
+    "author": "Stephen Hawking",
+    "price": 197532,
+    "stock": 14,
+    "category": "Triết học"
   },
   {
     "title": "Sapiens: Lược sử loài người",
     "author": "Yuval Noah Harari",
-    "price": 180000,
+    "price": 181719,
+    "stock": 26,
+    "category": "Văn học nước ngoài"
+  },
+  {
+    "title": "Vũ trụ trong vỏ hạt dẻ",
+    "author": "Yuval Noah Harari",
+    "price": 173040,
     "stock": 8,
-    "category": "Lịch sử"
+    "category": "Học máy"
   },
   {
-    "title": "1984",
-    "author": "George Orwell",
-    "price": 110000,
+    "title": "Mật mã Da Vinci",
+    "author": "Nguyễn Du",
+    "price": 124081,
+    "stock": 50,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Rừng Na Uy",
+    "author": "Xuân Quỳnh",
+    "price": 473286,
     "stock": 14,
-    "category": "Chính trị - Xã hội"
+    "category": "Triết học"
   },
   {
-    "title": "Lập Trình Python Cơ Bản",
-    "author": "Nguyễn Văn A",
-    "price": 160000,
-    "stock": 25,
+    "title": "Iliad",
+    "author": "Xuân Quỳnh",
+    "price": 444453,
+    "stock": 7,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Kiêu hãnh và Định kiến",
+    "author": "Xuân Quỳnh",
+    "price": 62820,
+    "stock": 13,
+    "category": "Triết học"
+  },
+  {
+    "title": "Ông già và biển cả",
+    "author": "Yuval Noah Harari",
+    "price": 144005,
+    "stock": 48,
     "category": "Công nghệ"
   },
   {
-    "title": "Tuổi Trẻ Đáng Giá Bao Nhiêu",
-    "author": "Rosie Nguyễn",
-    "price": 90000,
-    "stock": 18,
+    "title": "Chiến tranh và Hòa bình",
+    "author": "Jane Austen",
+    "price": 140042,
+    "stock": 39,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Những cuộc phiêu lưu của Tom Sawyer",
+    "author": "Stephen Hawking",
+    "price": 355462,
+    "stock": 21,
+    "category": "Triết học"
+  },
+  {
+    "title": "Nhà giả kim",
+    "author": "Homer",
+    "price": 450131,
+    "stock": 35,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Không gia đình",
+    "author": "Arthur Conan Doyle",
+    "price": 482729,
+    "stock": 31,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Tuổi thơ dữ dội",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 395977,
+    "stock": 47,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Mắt biếc",
+    "author": "Homer",
+    "price": 76267,
+    "stock": 32,
+    "category": "Văn học nước ngoài"
+  },
+  {
+    "title": "Cánh đồng bất tận",
+    "author": "Nguyễn Minh Châu",
+    "price": 68482,
+    "stock": 45,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Bí mật của Naoko",
+    "author": "Yuval Noah Harari",
+    "price": 355838,
+    "stock": 46,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Kafka bên bờ biển",
+    "author": "Nguyễn Minh Châu",
+    "price": 490212,
+    "stock": 9,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Người đua diều",
+    "author": "Nam Cao",
+    "price": 482768,
+    "stock": 3,
     "category": "Kỹ năng sống"
   },
   {
-    "title": "Chiến tranh và Hòa bình",
-    "author": "Lev Tolstoy",
-    "price": 200000,
-    "stock": 5,
-    "category": "Văn học kinh điển"
+    "title": "Ba chàng lính ngự lâm",
+    "author": "Xuân Quỳnh",
+    "price": 289123,
+    "stock": 2,
+    "category": "Tôn giáo"
   },
   {
-    "title": "Truyện Kiều",
+    "title": "Hoàng tử bé",
+    "author": "Nguyễn Minh Châu",
+    "price": 56011,
+    "stock": 48,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Giết con chim nhại",
     "author": "Nguyễn Du",
-    "price": 80000,
+    "price": 52079,
+    "stock": 24,
+    "category": "Sách thiếu nhi"
+  },
+  {
+    "title": "Đồi gió hú",
+    "author": "Leo Tolstoy",
+    "price": 91258,
+    "stock": 46,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Tiếng chim hót trong bụi mận gai",
+    "author": "Dan Brown",
+    "price": 160907,
+    "stock": 24,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Thần thoại Hy Lạp",
+    "author": "George Orwell",
+    "price": 438362,
+    "stock": 32,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Khuyến học",
+    "author": "Stephen Hawking",
+    "price": 164314,
+    "stock": 24,
+    "category": "Xã hội học"
+  },
+  {
+    "title": "Lược sử thời gian",
+    "author": "Nguyễn Minh Châu",
+    "price": 103980,
+    "stock": 20,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "Homo Deus",
+    "author": "Xuân Quỳnh",
+    "price": 206231,
+    "stock": 8,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Khởi nghiệp tinh gọn",
+    "author": "Haruki Murakami",
+    "price": 53961,
+    "stock": 14,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Bí mật tư duy triệu phú",
+    "author": "Leo Tolstoy",
+    "price": 252413,
+    "stock": 40,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Cha giàu cha nghèo",
+    "author": "Stephen Hawking",
+    "price": 114622,
+    "stock": 32,
+    "category": "Xã hội học"
+  },
+  {
+    "title": "Tâm lý học đám đông",
+    "author": "Nam Cao",
+    "price": 343209,
     "stock": 30,
+    "category": "Học máy"
+  },
+  {
+    "title": "Tư bản",
+    "author": "Homer",
+    "price": 54957,
+    "stock": 35,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Nguồn gốc các loài",
+    "author": "Yuval Noah Harari",
+    "price": 118687,
+    "stock": 47,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Bí ẩn mãi mãi là bí ẩn",
+    "author": "Yuval Noah Harari",
+    "price": 117675,
+    "stock": 20,
+    "category": "Triết học"
+  },
+  {
+    "title": "Những người khốn khổ",
+    "author": "George Orwell",
+    "price": 100029,
+    "stock": 1,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Nhà thờ Đức Bà Paris",
+    "author": "Nguyễn Minh Châu",
+    "price": 200602,
+    "stock": 31,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Hoà bình mong manh",
+    "author": "Mark Twain",
+    "price": 345238,
+    "stock": 14,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Búp sen xanh",
+    "author": "Homer",
+    "price": 50381,
+    "stock": 46,
+    "category": "Sách thiếu nhi"
+  },
+  {
+    "title": "Đường xưa mây trắng",
+    "author": "Leo Tolstoy",
+    "price": 370992,
+    "stock": 27,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Trăm năm cô đơn",
+    "author": "Yuval Noah Harari",
+    "price": 137908,
+    "stock": 37,
+    "category": "Xã hội học"
+  },
+  {
+    "title": "Tình yêu thời thổ tả",
+    "author": "J.K. Rowling",
+    "price": 336076,
+    "stock": 4,
+    "category": "Học máy"
+  },
+  {
+    "title": "Truyện Kiều (bản 51)",
+    "author": "George Orwell",
+    "price": 220563,
+    "stock": 38,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Chí Phèo (bản 52)",
+    "author": "Nam Cao",
+    "price": 222330,
+    "stock": 6,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Tắt Đèn (bản 53)",
+    "author": "Nguyễn Du",
+    "price": 428819,
+    "stock": 20,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Dế Mèn Phiêu Lưu Ký (bản 54)",
+    "author": "Haruki Murakami",
+    "price": 425681,
+    "stock": 8,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Lão Hạc (bản 55)",
+    "author": "Dan Brown",
+    "price": 295830,
+    "stock": 22,
+    "category": "Sách thiếu nhi"
+  },
+  {
+    "title": "Nhật ký trong tù (bản 56)",
+    "author": "Nguyễn Minh Châu",
+    "price": 176938,
+    "stock": 19,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Đắc nhân tâm (bản 57)",
+    "author": "Arthur Conan Doyle",
+    "price": 221309,
+    "stock": 4,
+    "category": "Kỹ năng sống"
+  },
+  {
+    "title": "Harry Potter và Hòn đá phù thủy (bản 58)",
+    "author": "George Orwell",
+    "price": 430412,
+    "stock": 41,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "1984 (bản 59)",
+    "author": "Mark Twain",
+    "price": 164258,
+    "stock": 35,
+    "category": "Triết học"
+  },
+  {
+    "title": "Animal Farm (bản 60)",
+    "author": "Jane Austen",
+    "price": 495388,
+    "stock": 8,
+    "category": "Sách thiếu nhi"
+  },
+  {
+    "title": "Sapiens: Lược sử loài người (bản 61)",
+    "author": "Ernest Hemingway",
+    "price": 308860,
+    "stock": 8,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Vũ trụ trong vỏ hạt dẻ (bản 62)",
+    "author": "Haruki Murakami",
+    "price": 148956,
+    "stock": 24,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Mật mã Da Vinci (bản 63)",
+    "author": "Yuval Noah Harari",
+    "price": 156066,
+    "stock": 47,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Rừng Na Uy (bản 64)",
+    "author": "Xuân Quỳnh",
+    "price": 435127,
+    "stock": 45,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Iliad (bản 65)",
+    "author": "Nam Cao",
+    "price": 158701,
+    "stock": 2,
+    "category": "Triết học"
+  },
+  {
+    "title": "Kiêu hãnh và Định kiến (bản 66)",
+    "author": "Tô Hoài",
+    "price": 74578,
+    "stock": 32,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Ông già và biển cả (bản 67)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 411751,
+    "stock": 29,
+    "category": "Văn học nước ngoài"
+  },
+  {
+    "title": "Chiến tranh và Hòa bình (bản 68)",
+    "author": "Jane Austen",
+    "price": 160865,
+    "stock": 1,
+    "category": "Kỹ năng sống"
+  },
+  {
+    "title": "Những cuộc phiêu lưu của Tom Sawyer (bản 69)",
+    "author": "Dan Brown",
+    "price": 310255,
+    "stock": 22,
+    "category": "Học máy"
+  },
+  {
+    "title": "Nhà giả kim (bản 70)",
+    "author": "Stephen Hawking",
+    "price": 263135,
+    "stock": 11,
+    "category": "Học máy"
+  },
+  {
+    "title": "Không gia đình (bản 71)",
+    "author": "Jane Austen",
+    "price": 150022,
+    "stock": 36,
     "category": "Văn học Việt Nam"
   },
   {
-    "title": "Trí tuệ nhân tạo - Tương lai và hiện tại",
-    "author": "Nguyễn Văn A",
-    "price": 150000,
-    "stock": 12,
-    "category": "Giới thiệu tổng quan về AI, ứng dụng và tiềm năng phát triển."
+    "title": "Tuổi thơ dữ dội (bản 72)",
+    "author": "Haruki Murakami",
+    "price": 237113,
+    "stock": 41,
+    "category": "Lịch sử"
   },
   {
-    "title": "Học máy cơ bản",
-    "author": "Trần Thị B",
-    "price": 200000,
+    "title": "Mắt biếc (bản 73)",
+    "author": "Haruki Murakami",
+    "price": 431000,
     "stock": 5,
-    "category": "Cung cấp kiến thức nền tảng về machine learning."
+    "category": "Văn học nước ngoài"
   },
   {
-    "title": "Python cho phân tích dữ liệu",
-    "author": "Lê Văn C",
-    "price": 180000,
-    "stock": 8,
-    "category": "Hướng dẫn phân tích và trực quan hóa dữ liệu bằng Python."
+    "title": "Cánh đồng bất tận (bản 74)",
+    "author": "Jane Austen",
+    "price": 131218,
+    "stock": 5,
+    "category": "Xã hội học"
   },
   {
-    "title": "Xử lý ngôn ngữ tự nhiên với Python",
-    "author": "Phạm Thị D",
-    "price": 220000,
-    "stock": 7,
-    "category": "Ứng dụng Python trong xử lý văn bản và NLP."
+    "title": "Bí mật của Naoko (bản 75)",
+    "author": "Yuval Noah Harari",
+    "price": 135460,
+    "stock": 25,
+    "category": "Toán học"
   },
   {
-    "title": "Deep Learning căn bản",
-    "author": "Ngô Văn E",
-    "price": 250000,
-    "stock": 10,
-    "category": "Giới thiệu mạng nơ-ron và các mô hình học sâu phổ biến."
-  },
-  {
-    "title": "Thị giác máy tính hiện đại",
-    "author": "Hoàng Thị F",
-    "price": 230000,
-    "stock": 4,
-    "category": "Phân tích và ứng dụng computer vision trong thực tiễn."
-  },
-  {
-    "title": "Khoa học dữ liệu cho người mới",
-    "author": "Vũ Văn G",
-    "price": 170000,
-    "stock": 15,
-    "category": "Cung cấp kiến thức tổng quan về khoa học dữ liệu."
-  },
-  {
-    "title": "Mạng nơ-ron và tối ưu hóa",
-    "author": "Đặng Thị H",
-    "price": 240000,
-    "stock": 6,
-    "category": "Giới thiệu các thuật toán tối ưu trong deep learning."
-  },
-  {
-    "title": "AI trong đời sống",
-    "author": "Phan Văn I",
-    "price": 160000,
-    "stock": 9,
-    "category": "Khám phá các ứng dụng AI trong y tế, giáo dục, và thương mại."
-  },
-  {
-    "title": "Toán học cho Machine Learning",
-    "author": "Nguyễn Thị K",
-    "price": 210000,
+    "title": "Kafka bên bờ biển (bản 76)",
+    "author": "Nam Cao",
+    "price": 73410,
     "stock": 11,
-    "category": "Trình bày kiến thức toán học nền tảng cho học máy."
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Người đua diều (bản 77)",
+    "author": "Mark Twain",
+    "price": 283694,
+    "stock": 15,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Ba chàng lính ngự lâm (bản 78)",
+    "author": "George Orwell",
+    "price": 250473,
+    "stock": 17,
+    "category": "Triết học"
+  },
+  {
+    "title": "Hoàng tử bé (bản 79)",
+    "author": "Yuval Noah Harari",
+    "price": 181068,
+    "stock": 4,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Giết con chim nhại (bản 80)",
+    "author": "Xuân Quỳnh",
+    "price": 484975,
+    "stock": 33,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Đồi gió hú (bản 81)",
+    "author": "Stephen Hawking",
+    "price": 288602,
+    "stock": 21,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Tiếng chim hót trong bụi mận gai (bản 82)",
+    "author": "Mark Twain",
+    "price": 277022,
+    "stock": 43,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Thần thoại Hy Lạp (bản 83)",
+    "author": "Haruki Murakami",
+    "price": 304008,
+    "stock": 6,
+    "category": "Kỹ năng sống"
+  },
+  {
+    "title": "Khuyến học (bản 84)",
+    "author": "Nguyễn Minh Châu",
+    "price": 283978,
+    "stock": 11,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Lược sử thời gian (bản 85)",
+    "author": "Yuval Noah Harari",
+    "price": 398276,
+    "stock": 34,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Homo Deus (bản 86)",
+    "author": "Yuval Noah Harari",
+    "price": 279729,
+    "stock": 1,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Khởi nghiệp tinh gọn (bản 87)",
+    "author": "Haruki Murakami",
+    "price": 493566,
+    "stock": 44,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Bí mật tư duy triệu phú (bản 88)",
+    "author": "J.K. Rowling",
+    "price": 207027,
+    "stock": 16,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "Cha giàu cha nghèo (bản 89)",
+    "author": "Mark Twain",
+    "price": 226646,
+    "stock": 7,
+    "category": "Toán học"
+  },
+  {
+    "title": "Tâm lý học đám đông (bản 90)",
+    "author": "Nguyễn Minh Châu",
+    "price": 185237,
+    "stock": 10,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Tư bản (bản 91)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 415301,
+    "stock": 1,
+    "category": "Sách thiếu nhi"
+  },
+  {
+    "title": "Nguồn gốc các loài (bản 92)",
+    "author": "Dan Brown",
+    "price": 144498,
+    "stock": 23,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Bí ẩn mãi mãi là bí ẩn (bản 93)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 180603,
+    "stock": 1,
+    "category": "Triết học"
+  },
+  {
+    "title": "Những người khốn khổ (bản 94)",
+    "author": "Arthur Conan Doyle",
+    "price": 100103,
+    "stock": 8,
+    "category": "Toán học"
+  },
+  {
+    "title": "Nhà thờ Đức Bà Paris (bản 95)",
+    "author": "Leo Tolstoy",
+    "price": 66012,
+    "stock": 32,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Hoà bình mong manh (bản 96)",
+    "author": "Ernest Hemingway",
+    "price": 218971,
+    "stock": 47,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Búp sen xanh (bản 97)",
+    "author": "Nguyễn Minh Châu",
+    "price": 191807,
+    "stock": 6,
+    "category": "Học máy"
+  },
+  {
+    "title": "Đường xưa mây trắng (bản 98)",
+    "author": "Arthur Conan Doyle",
+    "price": 123408,
+    "stock": 14,
+    "category": "Học máy"
+  },
+  {
+    "title": "Trăm năm cô đơn (bản 99)",
+    "author": "Yuval Noah Harari",
+    "price": 142773,
+    "stock": 26,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Tình yêu thời thổ tả (bản 100)",
+    "author": "Nam Cao",
+    "price": 226217,
+    "stock": 23,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Truyện Kiều (bản 101)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 86028,
+    "stock": 12,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Chí Phèo (bản 102)",
+    "author": "Yuval Noah Harari",
+    "price": 75268,
+    "stock": 31,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Tắt Đèn (bản 103)",
+    "author": "Homer",
+    "price": 406421,
+    "stock": 36,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Dế Mèn Phiêu Lưu Ký (bản 104)",
+    "author": "Leo Tolstoy",
+    "price": 440819,
+    "stock": 48,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "Lão Hạc (bản 105)",
+    "author": "George Orwell",
+    "price": 216881,
+    "stock": 47,
+    "category": "Toán học"
+  },
+  {
+    "title": "Nhật ký trong tù (bản 106)",
+    "author": "Nguyễn Minh Châu",
+    "price": 283998,
+    "stock": 23,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Đắc nhân tâm (bản 107)",
+    "author": "Arthur Conan Doyle",
+    "price": 343463,
+    "stock": 24,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Harry Potter và Hòn đá phù thủy (bản 108)",
+    "author": "Haruki Murakami",
+    "price": 369157,
+    "stock": 28,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "1984 (bản 109)",
+    "author": "Nguyễn Minh Châu",
+    "price": 78615,
+    "stock": 4,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "Animal Farm (bản 110)",
+    "author": "Dan Brown",
+    "price": 330380,
+    "stock": 23,
+    "category": "Triết học"
+  },
+  {
+    "title": "Sapiens: Lược sử loài người (bản 111)",
+    "author": "Stephen Hawking",
+    "price": 400701,
+    "stock": 11,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Vũ trụ trong vỏ hạt dẻ (bản 112)",
+    "author": "Tô Hoài",
+    "price": 402767,
+    "stock": 45,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Mật mã Da Vinci (bản 113)",
+    "author": "Xuân Quỳnh",
+    "price": 126251,
+    "stock": 23,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Rừng Na Uy (bản 114)",
+    "author": "Yuval Noah Harari",
+    "price": 385929,
+    "stock": 45,
+    "category": "Toán học"
+  },
+  {
+    "title": "Iliad (bản 115)",
+    "author": "Jane Austen",
+    "price": 223642,
+    "stock": 14,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Kiêu hãnh và Định kiến (bản 116)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 71190,
+    "stock": 44,
+    "category": "Học máy"
+  },
+  {
+    "title": "Ông già và biển cả (bản 117)",
+    "author": "George Orwell",
+    "price": 363604,
+    "stock": 36,
+    "category": "Học máy"
+  },
+  {
+    "title": "Chiến tranh và Hòa bình (bản 118)",
+    "author": "Nguyễn Minh Châu",
+    "price": 287200,
+    "stock": 20,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Những cuộc phiêu lưu của Tom Sawyer (bản 119)",
+    "author": "Leo Tolstoy",
+    "price": 323617,
+    "stock": 3,
+    "category": "Học máy"
+  },
+  {
+    "title": "Nhà giả kim (bản 120)",
+    "author": "Homer",
+    "price": 127181,
+    "stock": 10,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Không gia đình (bản 121)",
+    "author": "Ernest Hemingway",
+    "price": 404430,
+    "stock": 47,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Tuổi thơ dữ dội (bản 122)",
+    "author": "Homer",
+    "price": 152245,
+    "stock": 39,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Mắt biếc (bản 123)",
+    "author": "Mark Twain",
+    "price": 485598,
+    "stock": 47,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Cánh đồng bất tận (bản 124)",
+    "author": "J.K. Rowling",
+    "price": 219033,
+    "stock": 43,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Bí mật của Naoko (bản 125)",
+    "author": "Arthur Conan Doyle",
+    "price": 111964,
+    "stock": 41,
+    "category": "Toán học"
+  },
+  {
+    "title": "Kafka bên bờ biển (bản 126)",
+    "author": "Xuân Quỳnh",
+    "price": 222747,
+    "stock": 38,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Người đua diều (bản 127)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 127074,
+    "stock": 44,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Ba chàng lính ngự lâm (bản 128)",
+    "author": "Tô Hoài",
+    "price": 323633,
+    "stock": 28,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Hoàng tử bé (bản 129)",
+    "author": "Jane Austen",
+    "price": 106281,
+    "stock": 21,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Giết con chim nhại (bản 130)",
+    "author": "Stephen Hawking",
+    "price": 116544,
+    "stock": 40,
+    "category": "Toán học"
+  },
+  {
+    "title": "Đồi gió hú (bản 131)",
+    "author": "Haruki Murakami",
+    "price": 83358,
+    "stock": 26,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Tiếng chim hót trong bụi mận gai (bản 132)",
+    "author": "Tô Hoài",
+    "price": 436931,
+    "stock": 7,
+    "category": "Toán học"
+  },
+  {
+    "title": "Thần thoại Hy Lạp (bản 133)",
+    "author": "Xuân Quỳnh",
+    "price": 87583,
+    "stock": 14,
+    "category": "Sách thiếu nhi"
+  },
+  {
+    "title": "Khuyến học (bản 134)",
+    "author": "Nam Cao",
+    "price": 247909,
+    "stock": 22,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Lược sử thời gian (bản 135)",
+    "author": "Dan Brown",
+    "price": 340313,
+    "stock": 20,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Homo Deus (bản 136)",
+    "author": "Homer",
+    "price": 358648,
+    "stock": 38,
+    "category": "Triết học"
+  },
+  {
+    "title": "Khởi nghiệp tinh gọn (bản 137)",
+    "author": "Mark Twain",
+    "price": 338901,
+    "stock": 18,
+    "category": "Toán học"
+  },
+  {
+    "title": "Bí mật tư duy triệu phú (bản 138)",
+    "author": "Nguyễn Du",
+    "price": 393598,
+    "stock": 43,
+    "category": "Học máy"
+  },
+  {
+    "title": "Cha giàu cha nghèo (bản 139)",
+    "author": "Xuân Quỳnh",
+    "price": 420716,
+    "stock": 5,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Tâm lý học đám đông (bản 140)",
+    "author": "George Orwell",
+    "price": 326838,
+    "stock": 46,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Tư bản (bản 141)",
+    "author": "Haruki Murakami",
+    "price": 253685,
+    "stock": 39,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Nguồn gốc các loài (bản 142)",
+    "author": "Nguyễn Minh Châu",
+    "price": 56862,
+    "stock": 33,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Bí ẩn mãi mãi là bí ẩn (bản 143)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 145234,
+    "stock": 15,
+    "category": "Xã hội học"
+  },
+  {
+    "title": "Những người khốn khổ (bản 144)",
+    "author": "Ernest Hemingway",
+    "price": 349324,
+    "stock": 7,
+    "category": "Văn học Việt Nam"
+  },
+  {
+    "title": "Nhà thờ Đức Bà Paris (bản 145)",
+    "author": "Dan Brown",
+    "price": 245249,
+    "stock": 20,
+    "category": "Văn học Việt Nam"
+  },
+  {
+    "title": "Hoà bình mong manh (bản 146)",
+    "author": "Nam Cao",
+    "price": 371540,
+    "stock": 44,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Búp sen xanh (bản 147)",
+    "author": "Nam Cao",
+    "price": 361193,
+    "stock": 28,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Đường xưa mây trắng (bản 148)",
+    "author": "J.K. Rowling",
+    "price": 317956,
+    "stock": 19,
+    "category": "Kỹ năng sống"
+  },
+  {
+    "title": "Trăm năm cô đơn (bản 149)",
+    "author": "Xuân Quỳnh",
+    "price": 488675,
+    "stock": 15,
+    "category": "Toán học"
+  },
+  {
+    "title": "Tình yêu thời thổ tả (bản 150)",
+    "author": "Ernest Hemingway",
+    "price": 395564,
+    "stock": 28,
+    "category": "Toán học"
+  },
+  {
+    "title": "Truyện Kiều (bản 51) (bản 151)",
+    "author": "Mark Twain",
+    "price": 274123,
+    "stock": 34,
+    "category": "Truyện ngắn"
+  },
+  {
+    "title": "Chí Phèo (bản 52) (bản 152)",
+    "author": "Nguyễn Minh Châu",
+    "price": 147298,
+    "stock": 13,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Tắt Đèn (bản 53) (bản 153)",
+    "author": "Homer",
+    "price": 417366,
+    "stock": 47,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Dế Mèn Phiêu Lưu Ký (bản 54) (bản 154)",
+    "author": "Leo Tolstoy",
+    "price": 160147,
+    "stock": 25,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Lão Hạc (bản 55) (bản 155)",
+    "author": "Nam Cao",
+    "price": 339386,
+    "stock": 37,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "Nhật ký trong tù (bản 56) (bản 156)",
+    "author": "Nguyễn Minh Châu",
+    "price": 367234,
+    "stock": 42,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Đắc nhân tâm (bản 57) (bản 157)",
+    "author": "J.K. Rowling",
+    "price": 165055,
+    "stock": 30,
+    "category": "Toán học"
+  },
+  {
+    "title": "Harry Potter và Hòn đá phù thủy (bản 58) (bản 158)",
+    "author": "Xuân Quỳnh",
+    "price": 116149,
+    "stock": 4,
+    "category": "Văn học Việt Nam"
+  },
+  {
+    "title": "1984 (bản 59) (bản 159)",
+    "author": "Dan Brown",
+    "price": 196911,
+    "stock": 39,
+    "category": "Triết học"
+  },
+  {
+    "title": "Animal Farm (bản 60) (bản 160)",
+    "author": "J.K. Rowling",
+    "price": 243739,
+    "stock": 2,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Sapiens: Lược sử loài người (bản 61) (bản 161)",
+    "author": "Arthur Conan Doyle",
+    "price": 144982,
+    "stock": 44,
+    "category": "Sách thiếu nhi"
+  },
+  {
+    "title": "Vũ trụ trong vỏ hạt dẻ (bản 62) (bản 162)",
+    "author": "Tô Hoài",
+    "price": 388784,
+    "stock": 21,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Mật mã Da Vinci (bản 63) (bản 163)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 92053,
+    "stock": 27,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Rừng Na Uy (bản 64) (bản 164)",
+    "author": "Homer",
+    "price": 205576,
+    "stock": 24,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Iliad (bản 65) (bản 165)",
+    "author": "Haruki Murakami",
+    "price": 111018,
+    "stock": 44,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Kiêu hãnh và Định kiến (bản 66) (bản 166)",
+    "author": "Homer",
+    "price": 116444,
+    "stock": 28,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Ông già và biển cả (bản 67) (bản 167)",
+    "author": "Ernest Hemingway",
+    "price": 69784,
+    "stock": 17,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Chiến tranh và Hòa bình (bản 68) (bản 168)",
+    "author": "Tô Hoài",
+    "price": 66490,
+    "stock": 50,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Những cuộc phiêu lưu của Tom Sawyer (bản 69) (bản 169)",
+    "author": "Jane Austen",
+    "price": 485487,
+    "stock": 18,
+    "category": "Thơ ca"
+  },
+  {
+    "title": "Nhà giả kim (bản 70) (bản 170)",
+    "author": "J.K. Rowling",
+    "price": 229727,
+    "stock": 22,
+    "category": "Kỹ năng sống"
+  },
+  {
+    "title": "Không gia đình (bản 71) (bản 171)",
+    "author": "Ernest Hemingway",
+    "price": 83260,
+    "stock": 33,
+    "category": "Văn học nước ngoài"
+  },
+  {
+    "title": "Tuổi thơ dữ dội (bản 72) (bản 172)",
+    "author": "Homer",
+    "price": 207373,
+    "stock": 23,
+    "category": "Văn học nước ngoài"
+  },
+  {
+    "title": "Mắt biếc (bản 73) (bản 173)",
+    "author": "Xuân Quỳnh",
+    "price": 234341,
+    "stock": 49,
+    "category": "Văn học nước ngoài"
+  },
+  {
+    "title": "Cánh đồng bất tận (bản 74) (bản 174)",
+    "author": "Nguyễn Du",
+    "price": 471908,
+    "stock": 38,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Bí mật của Naoko (bản 75) (bản 175)",
+    "author": "Nguyễn Minh Châu",
+    "price": 136579,
+    "stock": 35,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Kafka bên bờ biển (bản 76) (bản 176)",
+    "author": "Homer",
+    "price": 261685,
+    "stock": 43,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Người đua diều (bản 77) (bản 177)",
+    "author": "Haruki Murakami",
+    "price": 299108,
+    "stock": 3,
+    "category": "Tâm lý học"
+  },
+  {
+    "title": "Ba chàng lính ngự lâm (bản 78) (bản 178)",
+    "author": "Yuval Noah Harari",
+    "price": 302950,
+    "stock": 16,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Hoàng tử bé (bản 79) (bản 179)",
+    "author": "Yuval Noah Harari",
+    "price": 310362,
+    "stock": 36,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Giết con chim nhại (bản 80) (bản 180)",
+    "author": "Ernest Hemingway",
+    "price": 127689,
+    "stock": 46,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Đồi gió hú (bản 81) (bản 181)",
+    "author": "Ernest Hemingway",
+    "price": 218260,
+    "stock": 43,
+    "category": "Chính trị"
+  },
+  {
+    "title": "Tiếng chim hót trong bụi mận gai (bản 82) (bản 182)",
+    "author": "Tô Hoài",
+    "price": 209578,
+    "stock": 14,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Thần thoại Hy Lạp (bản 83) (bản 183)",
+    "author": "Jane Austen",
+    "price": 234756,
+    "stock": 19,
+    "category": "Lịch sử"
+  },
+  {
+    "title": "Khuyến học (bản 84) (bản 184)",
+    "author": "Nguyễn Minh Châu",
+    "price": 357872,
+    "stock": 24,
+    "category": "Tiểu thuyết"
+  },
+  {
+    "title": "Lược sử thời gian (bản 85) (bản 185)",
+    "author": "Homer",
+    "price": 496605,
+    "stock": 37,
+    "category": "Toán học"
+  },
+  {
+    "title": "Homo Deus (bản 86) (bản 186)",
+    "author": "Nam Cao",
+    "price": 295585,
+    "stock": 43,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Khởi nghiệp tinh gọn (bản 87) (bản 187)",
+    "author": "Jane Austen",
+    "price": 115972,
+    "stock": 6,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Bí mật tư duy triệu phú (bản 88) (bản 188)",
+    "author": "Jane Austen",
+    "price": 274978,
+    "stock": 16,
+    "category": "Tôn giáo"
+  },
+  {
+    "title": "Cha giàu cha nghèo (bản 89) (bản 189)",
+    "author": "Homer",
+    "price": 242764,
+    "stock": 18,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Tâm lý học đám đông (bản 90) (bản 190)",
+    "author": "Nam Cao",
+    "price": 384824,
+    "stock": 3,
+    "category": "Kinh tế"
+  },
+  {
+    "title": "Tư bản (bản 91) (bản 191)",
+    "author": "Nguyễn Minh Châu",
+    "price": 56569,
+    "stock": 44,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Nguồn gốc các loài (bản 92) (bản 192)",
+    "author": "George Orwell",
+    "price": 424925,
+    "stock": 21,
+    "category": "Kỹ năng sống"
+  },
+  {
+    "title": "Bí ẩn mãi mãi là bí ẩn (bản 93) (bản 193)",
+    "author": "J.K. Rowling",
+    "price": 181347,
+    "stock": 10,
+    "category": "Khoa học"
+  },
+  {
+    "title": "Những người khốn khổ (bản 94) (bản 194)",
+    "author": "George Orwell",
+    "price": 479995,
+    "stock": 37,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Nhà thờ Đức Bà Paris (bản 95) (bản 195)",
+    "author": "Yuval Noah Harari",
+    "price": 268516,
+    "stock": 34,
+    "category": "Văn học Việt Nam"
+  },
+  {
+    "title": "Hoà bình mong manh (bản 96) (bản 196)",
+    "author": "Haruki Murakami",
+    "price": 109816,
+    "stock": 20,
+    "category": "Trí tuệ nhân tạo"
+  },
+  {
+    "title": "Búp sen xanh (bản 97) (bản 197)",
+    "author": "Ernest Hemingway",
+    "price": 444177,
+    "stock": 27,
+    "category": "Sinh học"
+  },
+  {
+    "title": "Đường xưa mây trắng (bản 98) (bản 198)",
+    "author": "Nguyễn Nhật Ánh",
+    "price": 275982,
+    "stock": 15,
+    "category": "Triết học"
+  },
+  {
+    "title": "Trăm năm cô đơn (bản 99) (bản 199)",
+    "author": "Homer",
+    "price": 268352,
+    "stock": 16,
+    "category": "Công nghệ"
+  },
+  {
+    "title": "Tình yêu thời thổ tả (bản 100) (bản 200)",
+    "author": "Homer",
+    "price": 131682,
+    "stock": 43,
+    "category": "Học máy"
   }
 ]
