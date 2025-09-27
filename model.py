@@ -1,9 +1,16 @@
 import re
 import google.generativeai as genai
 import json
+from dotenv import load_dotenv
+import os
 
-genai.configure(api_key="AIzaSyB5zDpFEqzEQmBGK3axkLSqUKbNiUxzUWQ")
+
+load_dotenv()
+api_key = os.getenv("GENAI_API_KEY")
+
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-2.5-flash-lite")
+
 
 def classify_intent(message):
     prompt = f"""
