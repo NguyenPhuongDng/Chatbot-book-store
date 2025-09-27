@@ -44,16 +44,19 @@ GENAI_API_KEY=your_api_key
 python app.py
 ```
 
-Mặc định, Flask sẽ chạy tại:
+Giao diện chat bot của hệ thống sẽ chạy tại:
 [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+Xem thông tin đơn hàng và quản lý đơn hàng tại:
+[http://127.0.0.1:5000/staff](http://127.0.0.1:5000/staff)
 
 ---
 
 ## 6. Các chức năng chính
 
 * **Quản lý đơn hàng:** tạo mới, xem danh sách, cập nhật trạng thái.
-* **Chatbot hỗ trợ:** hỏi/đáp với AI (Gemini API).
-* **Lưu dữ liệu:** toàn bộ thông tin được lưu trong SQLite file `Orders.db`.
+* **Chatbot hỗ trợ:** hỏi/đáp/tìm kiếm/tạo đơn hàng tự động với AI (Gemini API).
+* **Lưu dữ liệu:** toàn bộ thông tin được lưu trong SQLite file `Orders.db` và `books.db`.
 
 ---
 
