@@ -90,17 +90,6 @@ def generate_response_with_data(message, intent, book_data=None):
 
             - Giữ văn phong ngắn gọn, thân thiện, lịch sự.
         """
-
-    elif intent == 'order':
-        prompt = f"""
-        Khách hàng muốn đặt hàng
-        Hãy kiểm trả thông tin khách hàng xem đã nhập đúng định dạng thông tin của 3 trường nội dung
-        Tên, Số điện thoại, Địa chỉ
-        Dưới đây là thông tin khách hàng
-        {book_data} 
-        Nếu đúng định dạng thông tin, trả về "Correct", nếu không đúng trả về "Wrong"
-        Trả về chỉ một từ: Correct hoặc Wrong
-        """
     else:
         prompt = f"""
         Bạn là chatbot bán hàng của BookStore.  
@@ -112,7 +101,7 @@ def generate_response_with_data(message, intent, book_data=None):
         3. Nếu khách muốn đặt hàng → Hỏi rõ tên sách để kiểm tra số lượng.  
         4. Nếu thông tin không thuộc phạm vi (sách/cửa hàng) → Trả lời: "Xin lỗi, tôi không biết về điều đó."  
         5. Không trả lời dài dòng. Tránh giải thích lý thuyết. Chỉ cung cấp thông tin cần thiết cho mua hàng.  
-        Hãy trả lời câu hỏi sau của khách hàng
+        Hãy trả lời câu hỏi sau của khách hàng.
         Câu hỏi: {message}
         """
     try:

@@ -21,17 +21,13 @@ def init_orders_db():
     ''')
     conn.commit()
     conn.close()
-
-# Gọi hàm khởi tạo khi start app
 init_orders_db()
 
 def query_books_by_dict(filters: dict):
     conn = sqlite3.connect("books.db")
     cursor = conn.cursor()
-
     conditions = []
     values = []
-
     for key, value in filters.items():
         if value is not None:
             conditions.append(f"{key} LIKE ?")
@@ -40,12 +36,9 @@ def query_books_by_dict(filters: dict):
     sql = "SELECT * FROM books"
     if conditions:
         sql += " WHERE " + " AND ".join(conditions)
-
     cursor.execute(sql, values)
     rows = cursor.fetchall()
     conn.close()
-    
-    # Convert to list of dictionaries for easier access
     books_list = []
     for row in rows:
         book = {
@@ -56,24 +49,27 @@ def query_books_by_dict(filters: dict):
             "stock": row[4],
             "category": row[5]
         }
-        books_list.append(book)
-    
+        books_list.append(book)  
     return books_list
 
 def get_all_orders():
     conn = sqlite3.connect("Orders.db")
     cursor = conn.cursor()
+    
+    # attach thêm database Books.db
+    cursor.execute("ATTACH DATABASE 'Books.db' AS books_db;")
+    
     cursor.execute('''
         SELECT o.order_id, o.customer_name, o.phone, o.address, 
                o.book_id, b.title, b.author, b.price, o.quantity, o.status
         FROM Orders o
-        LEFT JOIN books b ON o.book_id = b.book_id
+        LEFT JOIN books_db.books b ON o.book_id = b.book_id
         ORDER BY o.order_id DESC
     ''')
+    
     rows = cursor.fetchall()
     conn.close()
     
-    # Convert to list of dictionaries
     orders_list = []
     for row in rows:
         order = {
@@ -89,13 +85,23 @@ def get_all_orders():
             "status": row[9]
         }
         orders_list.append(order)
-    
     return orders_list
+
 
 def update_order_status(order_id, status):
     conn = sqlite3.connect("Orders.db")
     cursor = conn.cursor()
     cursor.execute('UPDATE Orders SET status = ? WHERE order_id = ?', (status, order_id))
+    conn.commit()
+    conn.close()
+
+def update_books_stock(stock, book_id):
+    conn = sqlite3.connect("books.db")
+    cursor = conn.cursor()
+    cursor.execute(
+        "UPDATE books SET stock = stock - ? WHERE book_id = ?",
+        (stock, book_id)
+    )
     conn.commit()
     conn.close()
 
@@ -160,7 +166,6 @@ def chat():
                 }
             else:
                 response = f"Rất tiếc!\nQuyển sách **{entities.get('title')}** đã hết hàng.\nBạn muốn tìm hoặc mua quyển sách khác không?"
-
         else:
             response = "Bạn muốn đặt quyển nào?\nHãy cho mình biết **tên sách** chính xác."
 
@@ -173,8 +178,6 @@ def chat():
 @app.route("/order", methods=["POST"])
 def order():
     data = request.json
-    
-    # Lưu order vào SQLite database thay vì JSON file
     conn = sqlite3.connect("Orders.db")
     cursor = conn.cursor()
     
@@ -189,10 +192,10 @@ def order():
         data.get('quantity'),
         'pending'
     ))
-    
     conn.commit()
     order_id = cursor.lastrowid
     conn.close()
+    update_books_stock(data.get('quantity'), data.get('book_id'))
 
     return jsonify({"status": "success", "message": "Đơn hàng đã được lưu", "order_id": order_id})
 
